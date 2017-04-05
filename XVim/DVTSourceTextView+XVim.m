@@ -192,9 +192,10 @@
     return;
 }
 
-- (BOOL)isIDEPlaygroundSourceTextView {
+- (BOOL)isIDEPlaygroundSourceTextView
+{
     return [self isMemberOfClass:NSClassFromString(@"IDEPlaygroundTextView")];
-}
+} 
 
 // Drawing Caret
 - (void)xvim__drawInsertionPointInRect:(NSRect)aRect color:(NSColor*)aColor{
