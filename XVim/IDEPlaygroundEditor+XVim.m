@@ -17,14 +17,14 @@
 #import <objc/runtime.h>
 #import "IDEPlaygroundEditor+XVim.h"
 
-@implementation IDEPlaygroundEditor(XVim)
-
-+ (void)xvim_initialize{
-    [self xvim_swizzleInstanceMethod:@selector(didSetupEditor) with:@selector(xvim_didSetupEditor2)];
-}
-
-- (void)xvim_didSetupEditor2{
-    [self xvim_didSetupEditor2]; // This is original didSetupEditor of IDEPlaygroundEditor class
-    [super didSetupEditor]; // This is super class (IDESourceCodeEditor) didSetupEditor, which is hooked by XVim, resulting in calling xvim_didSetupEditor.
-}
-@end
+// @implementation IDEPlaygroundEditor(XVim)
+// 
+// + (void)xvim_initialize{
+//     // [self xvim_swizzleInstanceMethod:@selector(didSetupEditor) with:@selector(xvim_didSetupEditor2)];
+// }
+// 
+// - (void)xvim_didSetupEditor2{
+//     // [self xvim_didSetupEditor2]; // This is original didSetupEditor of IDEPlaygroundEditor class
+//     [super didSetupEditor]; // This is super class (IDESourceCodeEditor) didSetupEditor, which is hooked by XVim, resulting in calling xvim_didSetupEditor.
+// }
+// @end

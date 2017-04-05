@@ -12,11 +12,10 @@
 @interface IDEPlaygroundEditor : IDESourceCodeEditor
 @end
 
-@interface IDEPlaygroundEditor(XVim)
-+ (void)xvim_initialize;
-
-// The reason to append "2" at end of the method name is because this class is inheited from IDESourceCodeEdtior
-// which we also swizzle. It interfares if we us the same name.
-- (void)xvim_didSetupEditor2;
-
-@end
+// @interface IDEPlaygroundEditor(XVim)
+// + (void)xvim_initialize;
+// 
+// // The reason to append "2" at end of the method name is because this class is inheited from IDESourceCodeEdtior
+// // which we also swizzle. It interfares if we us the same name.
+// - (void)xvim_didSetupEditor2;
+// @end
